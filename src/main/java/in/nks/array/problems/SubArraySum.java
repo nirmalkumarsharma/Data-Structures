@@ -23,18 +23,18 @@ public class SubArraySum {
 		findAnySum(copiedData, sumExprected);
 	}
 
-	private static void findAnySum(int[] copiedData, int sumExprected) {
+	private static void findAnySum(int[] copiedData, int sumExpected) {
 		Set<Integer> dataSet = new LinkedHashSet<Integer>();
 		dataSet.add(0);
 		int sum = 0;
 		int currPosition = 0;
 		for (Integer num : copiedData) {
 			sum+=num;
-			if(dataSet.contains(sum-sumExprected)) {
-				System.out.println("Given sum "+sumExprected+" SubArray exist");
+			if(dataSet.contains(sum-sumExpected)) {
+				System.out.println("Given sum "+sumExpected+" SubArray exist");
 				int position = 0;
 				for (Integer sums : dataSet) {
-					if(sums == (sum-sumExprected)) {
+					if(sums == (sum-sumExpected)) {
 						break;
 					} else position++;
 				}
