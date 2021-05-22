@@ -6,18 +6,19 @@ public class Bribery {
 
     // Complete the minimumBribes function below.
     static void minimumBribes(int[] q) {
-        int n = q.length;
-        int diff = 0;
+    	int bribes = 0;
+        int n = q. length;
         for ( int i = 0; i < n; i++ ) {
-            int possDiff = Math.abs(q[i]-i);
-            if( possDiff > 2 ) {
-                System.out.println("Too chaotic");
-                return;
+            if ( ( q[i]-(i+1) ) <= 2 ) {
+                if ( q[i] > (i+1) ) {
+                    bribes += q[i] - (i+1);
+                }
             } else {
-                diff += possDiff;
+                System.out.println("Too chaotic");
+                return ;
             }
         }
-        System.out.println(diff/2);
+        System.out.println(bribes);
     }
 
     private static final Scanner scanner = new Scanner(System.in);
