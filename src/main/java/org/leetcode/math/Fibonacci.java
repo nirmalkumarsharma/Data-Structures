@@ -1,8 +1,7 @@
-package org.leetcode;
+package org.leetcode.math;
 
 public class Fibonacci {
 	public static void main(String[] args) {
-		int n = 0;
 		for(int i = 0; i<30; i++) {
 			System.out.print(fib(i)+"\s");
 		}
